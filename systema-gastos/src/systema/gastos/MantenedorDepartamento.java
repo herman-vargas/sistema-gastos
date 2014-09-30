@@ -307,7 +307,7 @@ public class MantenedorDepartamento extends javax.swing.JFrame {
             public void run() {
                 new MantenedorDepartamento().setVisible(true);
             }
-        });
+        }); 
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton3;
