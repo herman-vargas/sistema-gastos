@@ -5,7 +5,8 @@
 package systema.gastos;
 
 /**
- *
+ * ESTE ES UN COMENTARIO DE
+ * LUIS MARCELO MIRANDA
  * @author Profesor
  */
 public class SystemaGastos {
