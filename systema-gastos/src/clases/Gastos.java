@@ -96,7 +96,7 @@ public class Gastos {
     
     }
     public int GastoMensual() {
-        int total =  agua+luz+gas+aseo+contingencia+user.get
+        int total =  agua+luz+gas+aseo+contingencia;
         return total;
     }
 }
