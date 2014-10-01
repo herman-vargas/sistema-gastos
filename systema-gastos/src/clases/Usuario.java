@@ -26,5 +26,12 @@ public class Usuario {
     
     public Usuario(){}
     
-    
+       private void CrearUsuario(){      
+  }  
+   private void EliminarUsuario(){
+  } 
+   private void ModificarUsuario(){  
+  }  
+   private void BuscarUsuario(){  
+  } 
 }
