@@ -18,6 +18,34 @@ public class Edificio {
  private String DirEdificio;
  private int CantDeptos;
  private String SectorEdificio;
+
+    public int getCodEdificio() {
+        return CodEdificio;
+    }
+
+    public String getNombreEdificio() {
+        return NombreEdificio;
+    }
+
+    public String getDirEdificio() {
+        return DirEdificio;
+    }
+
+    public int getCantDeptos() {
+        return CantDeptos;
+    }
+
+    public String getSectorEdificio() {
+        return SectorEdificio;
+    }
+
+    public Edificio(int CodEdificio, String NombreEdificio, String DirEdificio, int CantDeptos, String SectorEdificio) {
+        this.CodEdificio = CodEdificio;
+        this.NombreEdificio = NombreEdificio;
+        this.DirEdificio = DirEdificio;
+        this.CantDeptos = CantDeptos;
+        this.SectorEdificio = SectorEdificio;
+    }
  
  
     private void CrearEdificio(){      

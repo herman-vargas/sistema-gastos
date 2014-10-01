@@ -99,4 +99,12 @@ public class Gastos {
         int total =  agua+luz+gas+aseo+contingencia;
         return total;
     }
+    public int GastoIndividual(Edificio c) {
+        int total =  (agua+luz+gas+aseo+contingencia)/c.getCantDeptos();
+        return total;
+    }
+    public int cantidadDpto(Edificio c) {
+        int cantidad = c.getCantDeptos();
+        return cantidad;
+    }
 }

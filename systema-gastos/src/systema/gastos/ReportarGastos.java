@@ -48,10 +48,26 @@ public class ReportarGastos extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         Cano = new javax.swing.JComboBox();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        Ltmes = new javax.swing.JLabel();
+        Ltdpto = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
         Eano = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        Lluz = new javax.swing.JLabel();
+        Lagua = new javax.swing.JLabel();
+        Lgas = new javax.swing.JLabel();
+        Laseo = new javax.swing.JLabel();
+        Lsueldo = new javax.swing.JLabel();
+        Lconti = new javax.swing.JLabel();
+        Llav = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        l1 = new javax.swing.JLabel();
+        Lcantidad = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,14 +108,47 @@ public class ReportarGastos extends javax.swing.JFrame {
 
         Cano.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2014", " " }));
 
-        jLabel12.setText("30000");
-        jLabel12.setBorder(javax.swing.BorderFactory.createTitledBorder("Total Mes"));
+        Ltmes.setText("$0");
+        Ltmes.setBorder(javax.swing.BorderFactory.createTitledBorder("Total Mes"));
 
-        jLabel11.setText("30000");
-        jLabel11.setBorder(javax.swing.BorderFactory.createTitledBorder("Total Individual"));
+        Ltdpto.setText("$0");
+        Ltdpto.setBorder(javax.swing.BorderFactory.createTitledBorder("Total Individual"));
 
         Eano.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         Eano.setText("Nombre_Ano");
+
+        jLabel4.setText("$");
+
+        jLabel14.setText("$");
+
+        jLabel15.setText("$");
+
+        jLabel16.setText("$");
+
+        jLabel17.setText("$");
+
+        jLabel19.setText("$");
+
+        Lluz.setText("0");
+
+        Lagua.setText("0");
+
+        Lgas.setText("0");
+
+        Laseo.setText("0");
+
+        Lsueldo.setText("0");
+
+        Lconti.setText("0");
+
+        Llav.setText("0");
+
+        jLabel27.setText("$");
+
+        l1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        l1.setText("Cant. Dptos: ");
+
+        Lcantidad.setText("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -113,9 +162,9 @@ public class ReportarGastos extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Ltmes, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(Ltdpto, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jSeparator5))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jSeparator3, javax.swing.GroupLayout.DEFAULT_SIZE, 1, Short.MAX_VALUE))
@@ -123,17 +172,57 @@ public class ReportarGastos extends javax.swing.JFrame {
                             .addComponent(jSeparator4)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jLabel10)
                                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5))
+                                    .addComponent(jLabel5)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel1)
+                                            .addComponent(jLabel2)
+                                            .addComponent(jLabel6)
+                                            .addComponent(jLabel7)
+                                            .addComponent(jLabel8))
+                                        .addGap(48, 48, 48)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel17)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Lsueldo))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel16)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Laseo))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel15)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Lgas))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel14)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Lagua))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel4)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Lluz))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel9)
+                                            .addComponent(jLabel10))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Lconti)
+                                            .addComponent(Llav))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(l1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Lcantidad)
+                                        .addGap(11, 11, 11))))
                             .addComponent(jSeparator1)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(Emes)
@@ -155,7 +244,11 @@ public class ReportarGastos extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(7, 7, 7)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(l1)
+                        .addComponent(Lcantidad)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -171,19 +264,40 @@ public class ReportarGastos extends javax.swing.JFrame {
                     .addComponent(Emes)
                     .addComponent(Eano))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel4)
+                    .addComponent(Lluz))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel14)
+                    .addComponent(Lagua))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel15)
+                    .addComponent(Lgas))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel16)
+                    .addComponent(Laseo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel17)
+                    .addComponent(Lsueldo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(Lconti)
+                    .addComponent(jLabel27))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel19)
+                    .addComponent(Llav))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -193,9 +307,8 @@ public class ReportarGastos extends javax.swing.JFrame {
                         .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(Ltmes, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Ltdpto, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -211,8 +324,25 @@ public class ReportarGastos extends javax.swing.JFrame {
         //JOptionPane.showMessageDialog( null, Cmes.getSelectedItem() );
         Emes.setText(Cmes.getSelectedItem().toString());
         Eano.setText(Cano.getSelectedItem().toString());
-        Gastos edificio1 = new Gastos();
         
+        //probando code
+        Gastos edificio1 = new Gastos();
+        edificio1.setAgua(50000);
+        edificio1.setAseo(50000);
+        edificio1.setContingencia(10000);
+        edificio1.setGas(100000);
+        
+        Lluz.setText(String.valueOf(edificio1.getLuz()));
+        Lagua.setText(String.valueOf(edificio1.getAgua()));
+        Laseo.setText(String.valueOf(edificio1.getAseo()));
+        Lconti.setText(String.valueOf(edificio1.getContingencia()));
+        Lgas.setText(String.valueOf(edificio1.getGas()));
+        
+        Ltmes.setText("$"+String.valueOf(edificio1.GastoMensual()));
+        
+        Edificio ed1 = new Edificio(1,"Esmeraldas","Vitacura #3333",50,"Oriente");
+        Lcantidad.setText(String.valueOf(edificio1.cantidadDpto(ed1)));
+        Ltdpto.setText("$"+String.valueOf(edificio1.GastoIndividual(ed1)));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -255,15 +385,30 @@ public class ReportarGastos extends javax.swing.JFrame {
     private javax.swing.JComboBox Cmes;
     private javax.swing.JLabel Eano;
     private javax.swing.JLabel Emes;
+    private javax.swing.JLabel Lagua;
+    private javax.swing.JLabel Laseo;
+    private javax.swing.JLabel Lcantidad;
+    private javax.swing.JLabel Lconti;
+    private javax.swing.JLabel Lgas;
+    private javax.swing.JLabel Llav;
+    private javax.swing.JLabel Lluz;
+    private javax.swing.JLabel Lsueldo;
+    private javax.swing.JLabel Ltdpto;
+    private javax.swing.JLabel Ltmes;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -274,5 +419,6 @@ public class ReportarGastos extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JLabel l1;
     // End of variables declaration//GEN-END:variables
 }
