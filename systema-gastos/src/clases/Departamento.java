@@ -4,8 +4,7 @@
  */
 package clases;
 
-import systema.gastos.Lavanderia;
-import systema.gastos.Pagos;
+
 
 /**
  *
@@ -19,7 +18,7 @@ public class Departamento {
     
  
  private int CodDepto;
- private Pagos PagoDepto;
+ private Pago PagoDepto;
  private String NombreCopropietario;
  private String EstadoDepto;
  private String NombreDuenoDepto;
@@ -42,11 +41,11 @@ public class Departamento {
         this.CodDepto = CodDepto;
     }
 
-    public Pagos getPagoDepto() {
+    public Pago getPagoDepto() {
         return PagoDepto;
     }
 
-    public void setPagoDepto(Pagos PagoDepto) {
+    public void setPagoDepto(Pago PagoDepto) {
         this.PagoDepto = PagoDepto;
     }
 
