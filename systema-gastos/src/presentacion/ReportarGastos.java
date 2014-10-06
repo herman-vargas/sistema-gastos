@@ -1,7 +1,8 @@
-package systema.gastos;
+package presentacion;
 
+import negocio.Edificio;
+import negocio.Gastos;
 import javax.swing.JOptionPane;
-import clases.*;
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
