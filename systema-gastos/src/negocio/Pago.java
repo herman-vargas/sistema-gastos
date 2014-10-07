@@ -4,6 +4,7 @@
  */
 package negocio;
 
+import datos.bdPagos;
 import java.util.*;
 
 /**
@@ -25,6 +26,17 @@ public class Pago {
     }
 
     public Pago() {
+    }
+    
+    public Boolean MostrarDatos(Pago pag){
+        
+        bdPagos pago = new bdPagos();
+        
+        if(pago.muestra(pag)){
+            return true;            
+        }else{
+            return false;
+        }
     }
     
     
