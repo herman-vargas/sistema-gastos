@@ -4,27 +4,25 @@
  */
 package datos;
 import java.sql.*;
-import negocio.Gastos;
-import negocio.Usuario;
+import negocio.Pago;
+
 /**
  *
  * @author Profesor
  */
-public class bdUsuario {
-    
+public class bdPagos {
     
     Connection conn = null;
     ResultSet rs = null;
     PreparedStatement pst = null;
     
-    public Boolean valida(Usuario u){
-     conn = Conector.conectorBd();
-     
-     int us =u.getRut();
-     String pa =u.getPassword();
-     //int pe = u.getPerfil();
-     
-     String sql ="select * from usuario where rut="+us+" and password='"+pa+"'";
+    public Boolean muestra(Pago p){
+        conn = Conector.conectorBd();
+        
+        int cp = p.getCod_pago();
+        
+        String sql ="select * from pago where cod_pago="+cp+";";
+        
         try{
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
@@ -37,10 +35,7 @@ public class bdUsuario {
             }
             
         }catch(Exception e){
-            return false;
-        }
-       
-    }
-    
-    
+            return false;        
+    }    
+}
 }

@@ -1,6 +1,5 @@
 package presentacion;
 
-import java.util.Date;
 import javax.swing.JOptionPane;
 import negocio.Gastos;
 

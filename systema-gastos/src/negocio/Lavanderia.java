@@ -16,7 +16,9 @@ public class Lavanderia {
     private int cod_Lav;
     private int codDepto;
     private Date fecha;
+    private int cant_ficha;
     private int valor;
+    
 
     public Lavanderia() {
     }
@@ -45,6 +47,14 @@ public class Lavanderia {
         this.fecha = fecha;
     }
 
+    public int getCant_ficha() {
+        return cant_ficha;
+    }
+
+    public void setCant_ficha(int cant_ficha) {
+        this.cant_ficha = cant_ficha;
+    }
+
     public int getValor() {
         return valor;
     }
@@ -52,6 +62,8 @@ public class Lavanderia {
     public void setValor(int valor) {
         this.valor = valor;
     }
+
+
     
     public void Sumar_total_lavados ()   {
 }

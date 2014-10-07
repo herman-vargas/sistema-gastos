@@ -33,20 +33,21 @@ public class Pagos extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         nom_copro = new javax.swing.JTextField();
         monto_pago = new javax.swing.JTextField();
-        Dpto = new javax.swing.JComboBox();
+        cb_Dpto = new javax.swing.JComboBox();
         fecha_pago = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         cod_pago = new javax.swing.JTextField();
         nom_due = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        btnacept = new javax.swing.JButton();
-        btncancel = new javax.swing.JButton();
+        btn_Aceptar = new javax.swing.JButton();
+        btn_Cancel = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
         jComboBox2 = new javax.swing.JComboBox();
         btnsalir = new javax.swing.JButton();
         btnvolver = new javax.swing.JButton();
+        btn_Mostrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,10 +61,10 @@ public class Pagos extends javax.swing.JFrame {
 
         jLabel5.setText("Monto Pagado");
 
-        Dpto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "101", "102", "103", "104", "105", "201", "202", "203", "204", "205", "301", "302", "303", "304", "305", "401", "402", "403", "404", "405" }));
-        Dpto.addActionListener(new java.awt.event.ActionListener() {
+        cb_Dpto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "101", "102", "103", "104", "105", "201", "202", "203", "204", "205", "301", "302", "303", "304", "305", "401", "402", "403", "404", "405" }));
+        cb_Dpto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DptoActionPerformed(evt);
+                cb_DptoActionPerformed(evt);
             }
         });
 
@@ -77,17 +78,17 @@ public class Pagos extends javax.swing.JFrame {
 
         jLabel7.setText("Nombre Dueño");
 
-        btnacept.setText("Aceptar");
-        btnacept.addActionListener(new java.awt.event.ActionListener() {
+        btn_Aceptar.setText("Aceptar");
+        btn_Aceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaceptActionPerformed(evt);
+                btn_AceptarActionPerformed(evt);
             }
         });
 
-        btncancel.setText("Cancelar");
-        btncancel.addActionListener(new java.awt.event.ActionListener() {
+        btn_Cancel.setText("Cancelar");
+        btn_Cancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncancelActionPerformed(evt);
+                btn_CancelActionPerformed(evt);
             }
         });
 
@@ -97,6 +98,11 @@ public class Pagos extends javax.swing.JFrame {
         jLabel9.setText("PAGOS");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Pagado", "Moroso", "Adeudado" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Pagado", "Moroso", "Adeudado" }));
 
@@ -109,15 +115,22 @@ public class Pagos extends javax.swing.JFrame {
 
         btnvolver.setText("<--");
 
+        btn_Mostrar.setText("Mostrar");
+        btn_Mostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_MostrarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnacept)
+                .addComponent(btn_Aceptar)
                 .addGap(73, 73, 73)
-                .addComponent(btncancel)
+                .addComponent(btn_Cancel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -145,9 +158,12 @@ public class Pagos extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(monto_pago, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(Dpto, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cb_Dpto, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(nom_due, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(cod_pago, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(cod_pago, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(42, 42, 42)
+                                    .addComponent(btn_Mostrar)))
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,11 +190,12 @@ public class Pagos extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(cod_pago, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cod_pago, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_Mostrar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(Dpto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cb_Dpto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
@@ -205,9 +222,9 @@ public class Pagos extends javax.swing.JFrame {
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnacept)
-                    .addComponent(btncancel))
-                .addContainerGap(37, Short.MAX_VALUE))
+                    .addComponent(btn_Aceptar)
+                    .addComponent(btn_Cancel))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
@@ -217,21 +234,34 @@ public class Pagos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cod_pagoActionPerformed
 
-    private void btnaceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaceptActionPerformed
+    private void btn_AceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AceptarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnaceptActionPerformed
+    }//GEN-LAST:event_btn_AceptarActionPerformed
 
-    private void btncancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncancelActionPerformed
+    private void btn_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CancelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btncancelActionPerformed
+    }//GEN-LAST:event_btn_CancelActionPerformed
 
-    private void DptoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DptoActionPerformed
+    private void cb_DptoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_DptoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_DptoActionPerformed
+        int codigo = Integer.parseInt(cb_Dpto.getSelectedItem().toString());
+        
+        
+        
+        
+    }//GEN-LAST:event_cb_DptoActionPerformed
 
     private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnsalirActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void btn_MostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_MostrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_MostrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -268,11 +298,12 @@ public class Pagos extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox Dpto;
-    private javax.swing.JButton btnacept;
-    private javax.swing.JButton btncancel;
+    private javax.swing.JButton btn_Aceptar;
+    private javax.swing.JButton btn_Cancel;
+    private javax.swing.JButton btn_Mostrar;
     private javax.swing.JButton btnsalir;
     private javax.swing.JButton btnvolver;
+    private javax.swing.JComboBox cb_Dpto;
     private javax.swing.JTextField cod_pago;
     private javax.swing.JTextField fecha_pago;
     private javax.swing.JComboBox jComboBox1;

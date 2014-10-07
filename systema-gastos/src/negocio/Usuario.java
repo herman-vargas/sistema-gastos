@@ -25,7 +25,9 @@ public class Usuario {
       
     public Usuario(){}
     
-   private void CrearUsuario(){      
+   private void CrearUsuario(){ 
+       
+       
   }  
    private void EliminarUsuario(){
   } 
