@@ -4,6 +4,7 @@
  */
 package datos;
 import java.sql.*;
+import negocio.Gastos;
 import negocio.Usuario;
 /**
  *
@@ -40,5 +41,6 @@ public class bdUsuario {
         }
        
     }
+    
     
 }
