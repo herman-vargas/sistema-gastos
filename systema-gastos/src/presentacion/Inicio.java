@@ -57,7 +57,7 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Temporal\\Mis documentos\\Programacion\\Proyectos Java\\sistema-gastos\\systema-gastos\\src\\presentacion\\Edilinea.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Temporal\\Mis documentos\\Programacion\\Proyectos Java\\sistema-gastos\\systema-gastos\\src\\presentacion\\Imagen\\Edilinea.png")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
