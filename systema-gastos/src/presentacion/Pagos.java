@@ -3,7 +3,8 @@
  * and open the template in the editor.
  */
 package presentacion;
-
+import java.util.ArrayList;
+import negocio.*;
 /**
  *
  * @author Profesor
@@ -15,8 +16,25 @@ public class Pagos extends javax.swing.JFrame {
      */
     public Pagos() {
         initComponents();
+        cargarDeptosCombo();
     }
 
+    public void cargarDeptosCombo(){
+    
+        int codigoEdificio=1;
+        Pago p = new Pago();
+        
+        ArrayList<String>lista = p.listarDeptos(codigoEdificio);
+        if(lista != null){
+            for(int i=0;i<lista.size();i++){
+                cb_Dpto.addItem(lista.get(i));
+            }
+        }
+    
+    
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -61,7 +79,6 @@ public class Pagos extends javax.swing.JFrame {
 
         jLabel5.setText("Monto Pagado");
 
-        cb_Dpto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "101", "102", "103", "104", "105", "201", "202", "203", "204", "205", "301", "302", "303", "304", "305", "401", "402", "403", "404", "405" }));
         cb_Dpto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cb_DptoActionPerformed(evt);

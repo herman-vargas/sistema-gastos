@@ -18,15 +18,17 @@ public class Pago {
     private Date fecha;
     private String estado;
 
-    public Pago(int cod_pago, int valor, Date fecha, String estado) {
-        this.cod_pago = cod_pago;
-        this.valor = valor;
-        this.fecha = fecha;
-        this.estado = estado;
-    }
-
+  
     public Pago() {
     }
+    
+    public ArrayList<String> listarDeptos(int codigo){
+    
+        bdPagos lista = new bdPagos();
+        
+        return lista.traerListaDepto(codigo);
+    }
+    
     
     public Boolean MostrarDatos(Pago pag){
         
