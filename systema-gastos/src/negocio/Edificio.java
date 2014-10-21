@@ -4,6 +4,9 @@
  */
 package negocio;
 
+import datos.bdMantenedorUsuario;
+import datos.bdMantenedorEdificio;
+
 /**
  *
  * @author Laboratorio
@@ -71,13 +74,24 @@ public class Edificio {
 
 
  
- 
- 
-    private void CrearEdificio(){      
+    private Boolean CrearEdificio(Edificio ced1){ 
+        
+     bdMantenedorEdificio ced2 = new bdMantenedorEdificio();
+     ced2.crea(ced1);
+     return true;
   }  
-   private void Eliminaredificio(){
+    
+   private Boolean EliminarEdificio(Edificio ced1){
+     
+     bdMantenedorEdificio ced2 = new bdMantenedorEdificio();
+     ced2.elimina(ced1);
+     return true;  
   } 
-   private void ModificarEdificio(){  
+   private Boolean ModificarEdificio(Edificio ced1){
+     bdMantenedorEdificio ced2 = new bdMantenedorEdificio();
+     ced2.modifica(ced1);
+     return true;    
+       
   }  
    private void BuscarEdificio(){  
   } 
