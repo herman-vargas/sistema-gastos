@@ -13,8 +13,7 @@ import negocio.Usuario;
  * @author Profesor
  */
 public class bdUsuario {
-    
-    
+ 
     Connection conn = null;
     ResultSet rs = null;
     PreparedStatement pst = null;

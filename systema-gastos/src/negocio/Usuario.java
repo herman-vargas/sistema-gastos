@@ -27,19 +27,19 @@ public class Usuario {
       
     public Usuario(){}
     
- private Boolean CrearUsuario(Usuario cusu1){ 
-     bdMantenedorUsuario cusua2 = new bdMantenedorUsuario();
-      cusua2.crea(cusu1);
+ public Boolean CrearUsuario(Usuario cusu1){ 
+     bdMantenedorUsuario cusu2 = new bdMantenedorUsuario();
+      cusu2.crea(cusu1);
      return true;
        
   }  
-   private Boolean EliminarUsuario(Usuario eusu1){
+   public Boolean EliminarUsuario(Usuario eusu1){
        bdMantenedorUsuario eusu2 = new bdMantenedorUsuario();
       eusu2.elimina(eusu1);
      return true; 
        
   } 
-   private Boolean ModificarUsuario(Usuario musu1){
+   public Boolean ModificarUsuario(Usuario musu1){
         bdMantenedorUsuario musu2 = new bdMantenedorUsuario();
       musu2.modifica(musu1);
      return true;

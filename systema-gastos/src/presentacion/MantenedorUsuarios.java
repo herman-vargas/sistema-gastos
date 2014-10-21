@@ -281,7 +281,7 @@ public class MantenedorUsuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_EliminarUsuarioActionPerformed
 
     private void btn_ModificarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ModificarUsuarioActionPerformed
-        // TODO add your handling code here:
+         // TODO add your handling code here:
           //int rut = Integer.parseInt(tf_usuario.getText());
         String nombre = txt_NombreUsuario.getText();
         String apellido = txt_ApellidoUsuario.getText();
@@ -295,6 +295,8 @@ public class MantenedorUsuarios extends javax.swing.JFrame {
          u.setRut(rut);
          u.setSueldo(sueldo);
          u.setPerfil(perfil);
+         
+         u.CrearUsuario(u);
     }//GEN-LAST:event_btn_ModificarUsuarioActionPerformed
 
     /**

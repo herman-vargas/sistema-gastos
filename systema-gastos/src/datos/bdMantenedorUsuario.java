@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import negocio.Usuario;
 
 /**
@@ -23,8 +24,8 @@ public class bdMantenedorUsuario {
     ResultSet rs = null;
     PreparedStatement pst = null;
     
- //CREAR USUARIO EN BASE DE DATOS   
-    public Boolean crea(Usuario cusu3){
+ //MODIFICA USUARIO EN BASE DE DATOS   
+    public Boolean modifica(Usuario cusu3){
      conn = Conector.conectorBd();
      
      String nombre = cusu3.getNombre();
@@ -61,11 +62,11 @@ public class bdMantenedorUsuario {
        
     }
     
-   //FIN CREAR USUARIO EN BASE DE DATOS 
+   //FIN MODIFICAR USUARIO EN BASE DE DATOS 
     
  //+++++++++++++++++++++++++++++++++++++++++++++   
- //MODIFICAR USUARIO EN BDD   
- public Boolean modifica(Usuario musu3){
+ //CREAR USUARIO EN BDD   
+ public Boolean crea(Usuario musu3){
      conn = Conector.conectorBd();
      
      String nombre = musu3.getNombre();
@@ -74,23 +75,23 @@ public class bdMantenedorUsuario {
      int sueldo = musu3.getSueldo();
      int perfil = musu3.getPerfil();
       
+     //+++++++++++++++++++++++++
+     //codigo de ejemplo select usuario
      //String sql ="select * from usuario where rut="+us+" and password='"+pa+"'";
-       String sql =" select pa_modificar_usuario(?,?,?,?,?)"; 
+      //String sql ="select * from usuario where rut="+us+" and password='"+pa+"'";
+        //try{
+          //  pst = conn.prepareStatement(sql);
+            //rs = pst.executeQuery();
+     //++++++++++++++++++++
+       String sql =" insert into usuario(nombre, apellido, rut, perfil, sueldo) values('"+nombre+"','"+apellido+"',"+rut+","+perfil+","+sueldo+")"; 
      try{
             pst = conn.prepareStatement(sql);
             
-            pst.setString(1, nombre);
-            pst.setString(2, apellido);
-            pst.setInt(3, rut);
-            pst.setInt(4, sueldo);
-            pst.setInt(5,perfil);
             
-            //rs = pst.executeQuery();
-            pst.execute();
-            
-            if(rs.next()){
+            if(pst.execute()){
+                 
                return true;
-                
+               
             }else {
            return false;
             
@@ -102,7 +103,7 @@ public class bdMantenedorUsuario {
        
     }
     
-//FIN MODIFICAR USUARIO EN BDD
+//FIN CREAR USUARIO EN BDD
 //+++++++++++++++++++++++++++++++++++++++++++++++   
 //ELIMINAR USUARIO EN BDD 
  
