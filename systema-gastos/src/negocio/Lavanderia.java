@@ -5,6 +5,8 @@
  */
 package negocio;
 
+import datos.*;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -21,6 +23,14 @@ public class Lavanderia {
     
 
     public Lavanderia() {
+    }
+    
+    
+        public ArrayList<String> listarDeptos(int codigo){
+    
+        bdPagos lista = new bdPagos();
+        
+        return lista.traerListaDepto(codigo);
     }
 
     public int getCod_Lav() {

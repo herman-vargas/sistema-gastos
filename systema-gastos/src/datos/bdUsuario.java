@@ -53,7 +53,7 @@ public class bdUsuario {
      //String sql ="select * from usuario where rut="+us+" and password='"+pa+"'";
     // String sql="select u.nombre, u.perfil, e.nombre as edificio\n" +
 //"from usuario u inner join edificio e on (e.cod_edificio=u.cod_edificio) where rut="+us+" and password='"+pa+"'";   
-       String sql = "select u.nombre, u.perfil, e.nombre as edificio\n" +
+       String sql = "select u.nombre, u.perfil, e.nombre as edificio, u.cod_edificio\n" +
 "from usuario u, edificio e \n" +
 "where e.cod_edificio=u.cod_edificio and rut="+us+" and password='"+pa+"'";
        
@@ -71,6 +71,8 @@ public class bdUsuario {
                ls.add(String.valueOf(rs.getString("nombre")));
                 ls.add(String.valueOf(rs.getInt("perfil")));
                 ls.add(rs.getString("edificio"));
+                ls.add(String.valueOf(rs.getInt("cod_edificio")));
+                
            }
             return ls;
   

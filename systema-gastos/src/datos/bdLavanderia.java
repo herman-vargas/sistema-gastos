@@ -21,7 +21,7 @@ public class bdLavanderia {
     ResultSet rs = null;
     PreparedStatement pst = null;
     
-    
+        
     
     public Boolean comprarficha(Lavanderia lav) {
         conn = Conector.conectorBd();

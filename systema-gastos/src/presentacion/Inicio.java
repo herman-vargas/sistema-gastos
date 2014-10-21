@@ -113,6 +113,7 @@ public class Inicio extends javax.swing.JFrame {
         String nombre= lista.get(0);
         int perfil = Integer.parseInt(lista.get(1));
         String edificio = lista.get(2);
+        String cod_edificio = lista.get(3);
         
         switch(perfil){
         
@@ -124,6 +125,9 @@ public class Inicio extends javax.swing.JFrame {
             case 2:   
                 Lavanderia la = new Lavanderia();
                 la.setVisible(true);
+                la.lblCodEd.setText("Edificio: "+edificio);
+                la.lblNombre.setText("bienvenido Don: "+ nombre);
+                la.lblCodE.setText(cod_edificio);
                 Inicio.this.dispose();
                 break;
                 
