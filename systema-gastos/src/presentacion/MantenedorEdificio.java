@@ -4,6 +4,8 @@
  */
 package presentacion;
 
+import negocio.Edificio;
+
 /**
  *
  * @author Profesor
@@ -116,6 +118,11 @@ public class MantenedorEdificio extends javax.swing.JFrame {
         btn_ModificarEdificio.setText("Modificar");
 
         btn_EliminarEdificio.setText("Eliminar");
+        btn_EliminarEdificio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_EliminarEdificioActionPerformed(evt);
+            }
+        });
 
         btn_CrearEdificio.setText("Crear");
         btn_CrearEdificio.addActionListener(new java.awt.event.ActionListener() {
@@ -218,7 +225,23 @@ public class MantenedorEdificio extends javax.swing.JFrame {
 
     private void btn_CrearEdificioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CrearEdificioActionPerformed
         // TODO add your handling code here:
+        //+++++++++++++++++++++++
+        // boton crear
+        String nombre = txt_NombreEdificio.getText();
+        String direccion = txt_DireccionEdificio.getText();
+        int cantdepto = Integer.parseInt(txt_CantidadDepto.getText());
+        String sector = txt_SectorEdificio.getText();
+        
+        Edificio e =new Edificio();
+        e.setNombreEdificio(nombre);
+        e.setDirEdificio(direccion);
+        e.setCantDeptos(cantdepto);
+        e.setSectorEdificio(sector);
     }//GEN-LAST:event_btn_CrearEdificioActionPerformed
+
+    private void btn_EliminarEdificioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EliminarEdificioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_EliminarEdificioActionPerformed
 
     /**
      * @param args the command line arguments

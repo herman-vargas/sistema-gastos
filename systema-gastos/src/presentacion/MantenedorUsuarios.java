@@ -4,6 +4,8 @@
  */
 package presentacion;
 
+import negocio.Usuario;
+
 /**
  *
  * @author Profesor
@@ -124,8 +126,18 @@ public class MantenedorUsuarios extends javax.swing.JFrame {
         });
 
         btn_ModificarUsuario.setText("Modificar");
+        btn_ModificarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ModificarUsuarioActionPerformed(evt);
+            }
+        });
 
         btn_EliminarUsuario.setText("Eliminar");
+        btn_EliminarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_EliminarUsuarioActionPerformed(evt);
+            }
+        });
 
         btn_CrearUsuario.setText("Crear");
         btn_CrearUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -238,7 +250,52 @@ public class MantenedorUsuarios extends javax.swing.JFrame {
 
     private void btn_CrearUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CrearUsuarioActionPerformed
         // TODO add your handling code here:
+        String nombre = txt_NombreUsuario.getText();
+        String apellido = txt_ApellidoUsuario.getText();
+        int rut = Integer.parseInt(txt_RutUsuario.getText());
+        int sueldo = Integer.parseInt(txt_SueldoUsuario.getText());
+        int perfil = Integer.parseInt(txt_PerfilUsuario.getText());
+              
+         Usuario u = new Usuario();
+         u.setNombre(nombre);
+         u.setApellido(apellido);
+         u.setRut(rut);
+         u.setSueldo(sueldo);
+         u.setPerfil(perfil);
     }//GEN-LAST:event_btn_CrearUsuarioActionPerformed
+
+    private void btn_EliminarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EliminarUsuarioActionPerformed
+        // TODO add your handling code here:
+        String nombre = txt_NombreUsuario.getText();
+        String apellido = txt_ApellidoUsuario.getText();
+        int rut = Integer.parseInt(txt_RutUsuario.getText());
+        int sueldo = Integer.parseInt(txt_SueldoUsuario.getText());
+        int perfil = Integer.parseInt(txt_PerfilUsuario.getText());
+              
+         Usuario u = new Usuario();
+         u.setNombre(nombre);
+         u.setApellido(apellido);
+         u.setRut(rut);
+         u.setSueldo(sueldo);
+         u.setPerfil(perfil);
+    }//GEN-LAST:event_btn_EliminarUsuarioActionPerformed
+
+    private void btn_ModificarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ModificarUsuarioActionPerformed
+        // TODO add your handling code here:
+          //int rut = Integer.parseInt(tf_usuario.getText());
+        String nombre = txt_NombreUsuario.getText();
+        String apellido = txt_ApellidoUsuario.getText();
+        int rut = Integer.parseInt(txt_RutUsuario.getText());
+        int sueldo = Integer.parseInt(txt_SueldoUsuario.getText());
+        int perfil = Integer.parseInt(txt_PerfilUsuario.getText());
+              
+         Usuario u = new Usuario();
+         u.setNombre(nombre);
+         u.setApellido(apellido);
+         u.setRut(rut);
+         u.setSueldo(sueldo);
+         u.setPerfil(perfil);
+    }//GEN-LAST:event_btn_ModificarUsuarioActionPerformed
 
     /**
      * @param args the command line arguments

@@ -6,6 +6,7 @@
 package negocio;
 
 
+import datos.bdMantenedorUsuario;
 import datos.bdUsuario;
 import java.util.*;
 
@@ -26,14 +27,23 @@ public class Usuario {
       
     public Usuario(){}
     
-   private void CrearUsuario(){ 
-       
+ private Boolean CrearUsuario(Usuario cusu1){ 
+     bdMantenedorUsuario cusua2 = new bdMantenedorUsuario();
+      cusua2.crea(cusu1);
+     return true;
        
   }  
-   private void EliminarUsuario(){
+   private Boolean EliminarUsuario(Usuario eusu1){
+       bdMantenedorUsuario eusu2 = new bdMantenedorUsuario();
+      eusu2.elimina(eusu1);
+     return true; 
+       
   } 
-   private void ModificarUsuario(){  
-  }  
+   private Boolean ModificarUsuario(Usuario musu1){
+        bdMantenedorUsuario musu2 = new bdMantenedorUsuario();
+      musu2.modifica(musu1);
+     return true;
+  }   
    private void BuscarUsuario(){  
   } 
    
