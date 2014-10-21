@@ -5,6 +5,7 @@
  */
 package negocio;
 
+
 import datos.bdUsuario;
 import java.util.*;
 
@@ -35,6 +36,13 @@ public class Usuario {
   }  
    private void BuscarUsuario(){  
   } 
+   
+  public ArrayList<String> listarUsuarioPerfil(Usuario u){
+    
+        bdUsuario lista = new bdUsuario();
+        
+        return lista.traerUsuarioPerfil(u);
+    }   
    
 public Boolean ValidarUsuario(Usuario usu){
     

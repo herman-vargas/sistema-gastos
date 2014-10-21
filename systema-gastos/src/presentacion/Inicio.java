@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package presentacion;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import negocio.Usuario;
 /**
@@ -106,12 +107,34 @@ public class Inicio extends javax.swing.JFrame {
         u.setRut(rut);
         u.setPassword(pass);
         
-        if(u.ValidarUsuario(u)){
+        
+        ArrayList<String> lista  = u.listarUsuarioPerfil(u);
+        
+        String nombre= lista.get(0);
+        int perfil = Integer.parseInt(lista.get(1));
+        String edificio = lista.get(2);
+        
+        switch(perfil){
+        
+            case 1:
+                Administrador ad = new Administrador();
+                ad.setVisible(true);
+                Inicio.this.dispose();
+                break;
+            case 2:   
+                Lavanderia la = new Lavanderia();
+                la.setVisible(true);
+                Inicio.this.dispose();
+                break;
+                
+        }  
+        
+       /* if(perfil){
             JOptionPane.showMessageDialog(this, "El usuario Existe");
             
         }else{
             JOptionPane.showMessageDialog(this, "El usuario NO Existe");
-        }
+        }*/
         
         
         
